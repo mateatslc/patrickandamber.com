@@ -1,2 +1,2 @@
-patrickandamber.com
-===================
+Patrick and Amber getting married!
+==================================
