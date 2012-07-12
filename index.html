@@ -3,56 +3,146 @@
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-<head>
+	<head>
+		<!-- Basic Page Needs
+	  ================================================== -->
+		<meta charset="utf-8">
+		<title>Patrick and Amber</title>
+		<meta name="description" content="">
+		<meta name="author" content="">
 
-	<!-- Basic Page Needs
-  ================================================== -->
-	<meta charset="utf-8">
-	<title>Patrick and Amber</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
+		<!-- Mobile Specific Metas
+	  ================================================== -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<!-- Mobile Specific Metas
-  ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<!-- CSS
+	  ================================================== -->
+		<link rel="stylesheet" href="stylesheets/base.css">
+		<link rel="stylesheet" href="stylesheets/skeleton.css">
+		<link rel="stylesheet" href="stylesheets/layout.css">
 
-	<!-- CSS
-  ================================================== -->
-	<link rel="stylesheet" href="stylesheets/base.css">
-	<link rel="stylesheet" href="stylesheets/skeleton.css">
-	<link rel="stylesheet" href="stylesheets/layout.css">
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
 
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+		<!-- Favicons
+		================================================== -->
+		<!-- <link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"> -->
+	</head>
 
-	<!-- Favicons
+	<body>
+		<!-- Primary Page Layout
+		================================================== -->
+		<div class="band header">
+			<header class="main container">
+				<h1 class="logo">
+					<a href="#">Save The Date</a>
+				</h1>
+			</header>
+		</div><!--end band-->
+
+		<div class="band navigation">
+			<nav class="primary container">
+				<ul>
+					<li><a href="#">Ceremony/Reception Information</a></li>
+					<li><a href="#">Their Cats</a></li>
+					<li><a href="#">Their Dogs</a></li>
+					<li><a href="#">Patrick</a></li>
+					<li><a href="#">Amber</a></li>
+				</ul>
+			</nav>
+		</div><!--end band-->
+
+		<div class="band content">
+			<div class="container">
+				<div class="five columns clearfix">
+asdfasdf
+				</div><!--end five-->
+				<div class="eleven columns">
+					<p>
+Patrick and Amber cordially invite you to attend their wedding
+ceremony at 1346 Roberta St in Salt Lake City UT, on Saturday
+September the 1st at 4pm. Guests are invited to arrive at 3pm, and
+immediately following the ceremony we will host a cocktail hour with
+hors d’oeuvres and beverages.
+					</p>
+					<p>
+The reception will take place at Spring Mobile Ballpark, the home of
+our minor league baseball team the <a href="http://www.milb.com/index.jsp?sid=t561">Salt Lake Bees</a>. The game/reception starts at
+6:35pm. We have reserved two suites and dinner, dessert, drinks and
+concessions will be provided. It is also one of the last home games
+for the season and will feature fireworks afterward.
+					</p>
+					<p>
+The couple has been sitting on a futon for two and half years.
+Therefore, if you would like to give us a gift, we are registered at
+Crate and Barrel for a sofa.
+					</p>
+					<p>
+Kindly RSVP by June 15th, and do so by emailing us at:
+<a href="mailto:youshouldcometothiswedding@gmail.com?Subject=RSVP" class="mailto">youshouldcometothiswedding@gmail.com</a>
+Let us know if you have any special dietary restrictions, allergies,
+or requests. You can also email us at that address with any comments,
+concerns, or questions you may have.
+					</p>
+					<p>
+If you will be looking for a hotel, staying at the Hotel Monaco will
+give you the full experience (this is where Patrick proposed).
+					<p>
+Dress attire is casual for both the ceremony and reception. Ties are
+strictly forbidden – please dress for a baseball game and not a
+wedding.
+					</p>
+				</div><!--end eleven-->
+			</div><!--end container-->
+		</div><!--end band-->
+
+		<div class="band bottom">
+			<footer class="bottom container">
+				<div class="eight columns first-credit">
+					<p>Copyright &copy; 2012 <a href="http://patrickandamber.com">patrickandamber.com</a> All Rights Reserved.</p>
+				</div>
+				<div class="eight columns last-credit">
+					<p>Created By <a href="#">Mate Olah</a>.</p>
+				</div>
+			</footer><!-- container -->
+		</div><!--end band-->
+
+	<!-- JS
+		================================================== -->
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+
+	<!--slight variant on Chris Coyier's http://css-tricks.com/convert-menu-to-dropdown/ -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// Create the dropdown bases
+			$('<select />').appendTo('.navigation nav');
+
+			// Create default option "Go to..."
+			$('<option />', {
+			   'selected': 'selected',
+			   'value': '',
+			   'text': 'Go to...'
+			}).appendTo('nav select');
+			// Populate dropdowns with the first menu items
+			$('.navigation nav li a').each(function() {
+			 	var el = $(this);
+			 	$('<option />', {
+			     	'value'   : el.attr('href'),
+			    	'text'    : el.text()
+			 	}).appendTo('nav select');
+			});
+
+			//make responsive dropdown menu actually work
+		  $('nav select').change(function() {
+		   	window.location = $(this).find('option:selected').val();
+		  });
+		});
+	</script>
+	<!-- End Document
 	================================================== -->
-	<!-- <link rel="shortcut icon" href="images/favicon.ico">
-	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"> -->
-
-</head>
-<body>
-
-
-
-	<!-- Primary Page Layout
-	================================================== -->
-
-	<!-- Delete everything in this .container and get started on your own site! -->
-
-	<div class="container">
-		<div class="sixteen columns">
-			<h1 class="remove-bottom" style="margin-top: 40px">Save the Date...</h1>
-			<h5>September the 1st</h5>
-			<hr />
-		</div>
-	</div><!-- container -->
-
-
-<!-- End Document
-================================================== -->
-</body>
+	</body>
 </html>
