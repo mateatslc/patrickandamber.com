@@ -74,9 +74,9 @@
 	h6 { font-size: 14px; line-height: 21px; }
 	.subheader { color: #777; }
 
-	p { margin: 0 0 20px 0; }
+	p { margin: 0 0 21px 0; }
 	p img { margin: 0; }
-	p.lead { font-size: 21px; line-height: 27px; color: #777;  }
+	p.lead { font-size: 21px; line-height: 28px; color: #777;  }
 
 	em { font-style: italic; }
 	strong { font-weight: bold; color: #333; }
@@ -101,7 +101,7 @@
 
 /* #Lists
 ================================================== */
-	ul, ol { margin-bottom: 20px; }
+	ul, ol { margin-bottom: 21px; }
 	ul { list-style: none outside; }
 	ol { list-style: decimal; }
 	ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
@@ -109,10 +109,10 @@
 	ul.circle { list-style: circle outside; }
 	ul.disc { list-style: disc outside; }
 	ul ul, ul ol,
-	ol ol, ol ul { margin: 4px 0 5px 30px; font-size: 90%;  }
+	ol ol, ol ul { margin: 4px 0 7px 30px; font-size: 90%;  }
 	ul ul li, ul ol li,
-	ol ol li, ol ul li { margin-bottom: 6px; }
-	li { line-height: 18px; margin-bottom: 12px; }
+	ol ol li, ol ul li { margin-bottom: 7px; }
+	li { line-height: 21px; margin-bottom: 14px; }
 	ul.large li { line-height: 21px; }
 	li p { line-height: 21px; }
 
