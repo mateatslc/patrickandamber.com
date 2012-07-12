@@ -16,6 +16,159 @@
 
 /* #Site Styles
 ================================================== */
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+
+img {
+	max-width: 100%;
+}
+
+.band {
+	background: url(../images/bg_main.png) repeat #f8f8f8;
+	padding: 0 0 14px 0;
+}
+
+.band.navigation {
+	background: url(../images/stitch_hr.png) left top repeat-x,
+				url(../images/bg_dark.png) repeat left 2px,
+				#343434;
+	padding: 0;
+	color: #e0e0e0;
+}
+
+.band.content {
+	background: url(../images/stitch_large.png) left top repeat-x,
+				url(../images/bg_dark.png) repeat left 2px,
+				#343434;
+	padding: 49px 0 14px 0;
+	color: #e0e0e0;
+	min-height: 600px;
+}
+
+.band.bottom {
+	background: url(../images/stitch_staggered.png) left top repeat-x,
+				url(../images/bg_bottom.png) repeat,
+				#343434;
+	padding: 28px 0 7px 0;
+	color: #e0e0e0;
+}
+
+/*ie multiple background image fallbacks*/
+.ie .band.navigation {
+	background: url(../images/bg_dark.png) repeat left 2px #343434;
+}
+.ie .band.Content {
+	background: url(../images/bg_dark.png) repeat left 2px #343434;
+}
+.ie .band.bottom {
+	background: url(../images/bg_bottom.png) repeat #343434;
+}
+
+/*navigation*/
+nav.primary ul,
+nav.primary ul li {
+	margin: 0px;
+}
+
+nav.primary select {
+	display: none;
+	width:  100%;
+	height: 28px;
+	margin: 21px 0;
+}
+
+nav.primary ul li {
+	display: inline;
+	float: left;
+	position: relative;
+}
+
+nav.primary ul li a {
+	display: inline-block;
+	line-height: 49px;
+	padding:  0 14px;
+	color: #ebebeb;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: 0.08em;
+}
+
+nav.primary ul li a:hover {
+	background: #424242;
+	cursor: pointer;
+}
+
+/*header*/
+header.main {
+	padding: 35px 10px;
+}
+
+header h1.logo {
+	margin: 10px 0 0 0;
+	float: left;
+}
+
+header h1.logo a {
+	width: 365px;
+	height: 49px;
+	display: block;
+	background: url(../images/sprite.png) no-repeat 0 0;
+
+	/*http://nicolasgallagher.com/another-css-image-replacement-technique/*/
+	font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+
+header.main .banner {
+	float: right;
+}
+
+/*content*/
+.content a,
+.content a:visited {
+	color: #8f8f8f;
+}
+
+.content a:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/*footer*/
+footer.bottom {
+	font-size: 12px;
+}
+
+.last-credit {
+	text-align: right;
+}
+
+footer a,
+footer a:visited {
+	color: #8f8f8f;
+}
+
+footer a:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+footer h3.logo {
+	margin: 13px 0 21px;
+}
+
+footer h3.logo a {
+	width: 200px;
+	height: 35px;
+	display: block;
+	background: url(../images/sprite.png) no-repeat 0 -50px;
+	text-indent: -9999%;
+}
 
 /* #Page Styles
 ================================================== */
@@ -33,11 +186,30 @@
 	@media only screen and (max-width: 767px) {}
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		nav.primary {
+			padding: 21px 0;
+		}
+		nav.primary select {
+			display: block;
+		}
+		nav.primary ul {
+			display: none;
+		}
+	}
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-	@media only screen and (max-width: 479px) {}
-
+	@media only screen and (max-width: 479px) {
+		nav.primary {
+			padding: 21px 0;
+		}
+		nav.primary select {
+			display: block;
+		}
+		nav.primary ul {
+			display: none;
+		}
+	}
 
 /* #Font-Face
 ================================================== */
