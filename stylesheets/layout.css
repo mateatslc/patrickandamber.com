@@ -9,25 +9,66 @@
 
 /* Table of Content
 ==================================================
+	#Typography
+	#Lists
 	#Site Styles
 	#Page Styles
 	#Media Queries
 	#Font-Face */
 
+/* #Typography (baseline corrections)
+================================================== */
+
+	h1 { line-height: 49px; margin-bottom: 14px;}
+	h2 { line-height: 42px; margin-bottom: 7px; }
+	h3 { line-height: 35px; margin-bottom: 7px; }
+	h4 { line-height: 28px; margin-bottom: 7px; }
+	h5 { line-height: 21px; }
+
+	p { margin: 0 0 21px 0; }
+	p.lead { line-height: 28px; }
+
+/*	Blockquotes  */
+	blockquote, blockquote p { line-height: 21px;}
+	blockquote { margin: 0 0 21px; padding: 7px 20px 0 19px; }
+
+	hr { margin: 14px 21px 21px; }
+	article { margin: 0 0 14px; }
+
+/* #Lists (baseline corrections)
+================================================== */
+	ul, ol { margin-bottom: 21px; }
+	ul ul, ul ol,
+	ol ol, ol ul { margin: 7px 0 7px 30px; }
+	ul ul li, ul ol li,
+	ol ol li, ol ul li { margin-bottom: 7px; }
+	li { line-height: 21px; margin-bottom: 14px; }
+
 /* #Site Styles
 ================================================== */
+@font-face{
+	font-family: 'WebSymbolsRegular';
+	src: url('../fonts/websymbols/websymbols-regular-webfont.eot');
+	src: url('../fonts/websymbols/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/websymbols/websymbols-regular-webfont.woff') format('woff'),
+	     url('../fonts/websymbols/websymbols-regular-webfont.ttf') format('truetype'),
+	     url('../fonts/websymbols/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+}
+
 * {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	}
+}
 
 img {
 	max-width: 100%;
+	/*border:	1px solid #D5D5D5;*/
+	border:	1px solid #E5E5E5;
 }
 
 .band {
-	background: url(../images/bg_main.png) repeat #f8f8f8;
+	background: url(../images/bg_main.png) repeat #F8F8F8;
 	padding: 0 0 14px 0;
 }
 
@@ -36,16 +77,24 @@ img {
 				url(../images/bg_dark.png) repeat left 2px,
 				#343434;
 	padding: 0;
-	color: #e0e0e0;
+	color: #E0E0E0;
 }
 
 .band.content {
+	/*background: url(../images/stitch_large.png) left top repeat-x,*/
+				/*url(../images/bg_dark.png) repeat left 2px,*/
+				/*#343434;*/
+	padding: 28px 0 14px 0;
+	/*color: #E0E0E0;*/
+	/*min-height: 600px;*/
+}
+
+.band.footer {
 	background: url(../images/stitch_large.png) left top repeat-x,
 				url(../images/bg_dark.png) repeat left 2px,
 				#343434;
 	padding: 49px 0 14px 0;
 	color: #e0e0e0;
-	min-height: 600px;
 }
 
 .band.bottom {
@@ -60,7 +109,7 @@ img {
 .ie .band.navigation {
 	background: url(../images/bg_dark.png) repeat left 2px #343434;
 }
-.ie .band.Content {
+.ie .band.footer {
 	background: url(../images/bg_dark.png) repeat left 2px #343434;
 }
 .ie .band.bottom {
@@ -70,7 +119,7 @@ img {
 /*navigation*/
 nav.primary ul,
 nav.primary ul li {
-	margin: 0px;
+	margin: 0;
 }
 
 nav.primary select {
@@ -90,25 +139,30 @@ nav.primary ul li a {
 	display: inline-block;
 	line-height: 49px;
 	padding:  0 14px;
-	color: #ebebeb;
+	color: #EBEBEB;
 	text-transform: uppercase;
 	text-decoration: none;
 	font-weight: bold;
 	letter-spacing: 0.08em;
 }
 
-nav.primary ul li a:hover {
+nav.primary ul li a:hover,
+nav.primary ul li a.active {
 	background: #424242;
 	cursor: pointer;
 }
 
 /*header*/
+.header {
+	padding: 0;
+}
+
 header.main {
-	padding: 35px 10px;
+	padding: 21px 0 14px;
 }
 
 header h1.logo {
-	margin: 10px 0 0 0;
+	margin: 7px 0 0 0;
 	float: left;
 }
 
@@ -124,42 +178,84 @@ header h1.logo a {
   color: transparent;
 }
 
-header.main .banner {
-	float: right;
+.banner {
+	/*float: right;*/
+	/*width: 500px;*/
+	/*position: absolute;*/
+	/*right: 0;*/
+}
+
+.banner img {
+	/*border: none;*/
+}
+
+/*images*/
+figure {
+	padding: 6px;
+	/*border: 1px solid #EDEDED;*/
+	border: 1px solid #e5e5e5;
+	/*border: 1px dashed #e5e5e5;*/
+	background: #FFF;
+	line-height: 0;
+	/*-webkit-box-shadow: 5px 7px 10px rgba(50, 50, 50, 0.5);*/
+	/*-moz-box-shadow: 5px 7px 10px rgba(50, 50, 50, 0.5);*/
+	/*box-shadow: 5px 7px 10px rgba(50, 50, 50, 0.5);*/
+	/*margin-right: 14px;*/
+}
+
+figcaption {
+	font-size: .75em;
+	text-align: center;
+	padding: 14px 0;
 }
 
 /*content*/
+hr {
+	border: none;
+	border-bottom: 1px dashed #e5e5e5;
+	/*padding: 14px 14px 28px;*/
+}
+
 .content a,
 .content a:visited {
-	color: #8f8f8f;
+	/*color: #8F8F8F;*/
 }
 
 .content a:hover {
-	color: #ffffff;
+	color: #000000;
 	text-decoration: none;
+	/*font-weight: bold;*/
+}
+
+.content .important {
+	font-weight: bold;
+	/*color: #D55355;*/
+	color: #F93902;
+	/*font-size: 21px;*/
+	display: block;
 }
 
 /*footer*/
-footer.bottom {
-	font-size: 12px;
-}
-
-.last-credit {
-	text-align: right;
-}
-
 footer a,
 footer a:visited {
-	color: #8f8f8f;
+	color: #8F8F8F;
 }
 
 footer a:hover {
-	color: #ffffff;
 	text-decoration: none;
+	color: #fff;
+}
+
+.bottom footer {
+	font-size: 12px;
+}
+
+div.last-credit {
+	text-align: right;
 }
 
 footer h3.logo {
-	margin: 13px 0 21px;
+	margin: 14px 0 21px;
 }
 
 footer h3.logo a {
@@ -167,7 +263,17 @@ footer h3.logo a {
 	height: 35px;
 	display: block;
 	background: url(../images/sprite.png) no-repeat 0 -50px;
-	text-indent: -9999%;
+
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+}
+
+/*icons*/
+.icon {
+	font-family: "WebSymbolsRegular";
+	font-size: 28px;
+	line-height: 1em;
 }
 
 /* #Page Styles
@@ -180,51 +286,57 @@ footer h3.logo a {
 	@media only screen and (max-width: 959px) {}
 
 	/* Tablet Portrait size to standard 960 (devices and browsers) */
-	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+		nav.primary ul li a {
+			padding: 0 11px;
+		}
+	}
 
 	/* All Mobile Sizes (devices and browser) */
-	@media only screen and (max-width: 767px) {}
-
-	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-	@media only screen and (min-width: 480px) and (max-width: 767px) {
-		nav.primary {
-			padding: 21px 0;
+	@media only screen and (max-width: 767px) {
+		.banner {
+			display: none;
 		}
 		nav.primary select {
 			display: block;
 		}
 		nav.primary ul {
 			display: none;
+		}
+		.bottom footer {
+			text-align: center;
+		}
+		header h1.logo a {
+			width: 300px;
+			height: 31px;
+			display: block;
+			background: url(../images/sprite.png) no-repeat 0 -100px;
+
+			/*http://nicolasgallagher.com/another-css-image-replacement-technique/*/
+			font: 0/0 a;
+		  text-shadow: none;
+		  color: transparent;
+		}
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		div.last-credit {
+			text-align: inherit;
 		}
 	}
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (max-width: 479px) {
-		nav.primary {
-			padding: 21px 0;
-		}
-		nav.primary select {
-			display: block;
-		}
-		nav.primary ul {
-			display: none;
+		div.last-credit {
+			text-align: inherit;
 		}
 	}
 
-/* #Font-Face
-================================================== */
-/* 	This is the proper syntax for an @font-face file
-		Just create a "fonts" folder at the root,
-		copy your FontName into code below and remove
-		comment brackets */
-
-/*	@font-face {
-	    font-family: 'FontName';
-	    src: url('../fonts/FontName.eot');
-	    src: url('../fonts/FontName.eot?iefix') format('eot'),
-	         url('../fonts/FontName.woff') format('woff'),
-	         url('../fonts/FontName.ttf') format('truetype'),
-	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
-	    font-weight: normal;
-	    font-style: normal; }
-*/
+	/* Additional large screens 1280+ */
+	@media only screen and (min-width: 1280px) {
+		/*body {
+			background: url(../images/bg_main.png) repeat #f8f8f8;
+			font: 16px/24px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}*/
+	}
