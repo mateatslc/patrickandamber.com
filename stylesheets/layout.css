@@ -162,12 +162,12 @@ header.main {
 }
 
 header h1.logo {
-	margin: 7px 0 0 0;
-	float: left;
+	margin: 35px 0 0 0;
+	float: right;
 }
 
 header h1.logo a {
-	width: 365px;
+	width: 364px;
 	height: 49px;
 	display: block;
 	background: url(../images/sprite.png) no-repeat 0 0;
@@ -179,28 +179,20 @@ header h1.logo a {
 }
 
 .banner {
-	/*float: right;*/
-	/*width: 500px;*/
-	/*position: absolute;*/
-	/*right: 0;*/
+	float: left;
+	width: 364px;
 }
 
 .banner img {
-	/*border: none;*/
 }
 
 /*images*/
 figure {
 	padding: 6px;
 	/*border: 1px solid #EDEDED;*/
-	border: 1px solid #e5e5e5;
-	/*border: 1px dashed #e5e5e5;*/
+	border: 1px solid #E5E5E5;
 	background: #FFF;
 	line-height: 0;
-	/*-webkit-box-shadow: 5px 7px 10px rgba(50, 50, 50, 0.5);*/
-	/*-moz-box-shadow: 5px 7px 10px rgba(50, 50, 50, 0.5);*/
-	/*box-shadow: 5px 7px 10px rgba(50, 50, 50, 0.5);*/
-	/*margin-right: 14px;*/
 }
 
 figcaption {
@@ -213,7 +205,6 @@ figcaption {
 hr {
 	border: none;
 	border-bottom: 1px dashed #e5e5e5;
-	/*padding: 14px 14px 28px;*/
 }
 
 .content a,
@@ -233,6 +224,10 @@ hr {
 	color: #F93902;
 	/*font-size: 21px;*/
 	display: block;
+}
+
+.content .important.inline {
+	display: inline;
 }
 
 /*footer*/
@@ -290,6 +285,14 @@ footer h3.logo a {
 		nav.primary ul li a {
 			padding: 0 11px;
 		}
+		.banner {
+			width: 340px;
+			float: right;
+		}
+		header h1.logo {
+			margin: 28px 0 0 0;
+			float: left;
+		}
 	}
 
 	/* All Mobile Sizes (devices and browser) */
@@ -306,16 +309,8 @@ footer h3.logo a {
 		.bottom footer {
 			text-align: center;
 		}
-		header h1.logo a {
-			width: 300px;
-			height: 31px;
-			display: block;
-			background: url(../images/sprite.png) no-repeat 0 -100px;
-
-			/*http://nicolasgallagher.com/another-css-image-replacement-technique/*/
-			font: 0/0 a;
-		  text-shadow: none;
-		  color: transparent;
+		header h1.logo {
+			float: left;
 		}
 	}
 
@@ -331,10 +326,27 @@ footer h3.logo a {
 		div.last-credit {
 			text-align: inherit;
 		}
+		header h1.logo a {
+			width: 300px;
+			height: 31px;
+			display: block;
+			background: url(../images/sprite.png) no-repeat 0 -100px;
+
+			/*http://nicolasgallagher.com/another-css-image-replacement-technique/*/
+			font: 0/0 a;
+		  text-shadow: none;
+		  color: transparent;
+		}
 	}
 
 	/* Additional large screens 1280+ */
 	@media only screen and (min-width: 1280px) {
+		header h1.logo {
+			margin: 42px 0 0 0;
+		}
+		.banner {
+			width: 410px;
+		}
 		/*body {
 			background: url(../images/bg_main.png) repeat #f8f8f8;
 			font: 16px/24px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
